@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import SongList from "./SongList";
+import AddButton from "./AddButton";
+import "./App.css";
 
-function App() {
+const songList = [
+  { title: "songA", duration: "3:12" },
+  { title: "songB", duration: "2:39" },
+  { title: "songC", duration: "3:41" },
+  { title: "songD", duration: "2:59" },
+];
+
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="header">쥬크박스</div>
+      <div className="main">
+        <SongList songs={songList} />
+        <AddButton />
+      </div>
     </div>
   );
-}
+};
 
 export default App;
