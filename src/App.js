@@ -15,7 +15,7 @@ const App = () => {
     <div className="App">
       <div className="header">쥬크박스</div>
       <div className="main">
-        <SongList songs={songList} />
+        <SongList songList={songList} />
         <AddButton />
       </div>
     </div>
